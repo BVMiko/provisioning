@@ -1,0 +1,4 @@
+#cloud-config
+runcmd:
+  - curl -fsSL https://raw.githubusercontent.com/BVMiko/provisioning/master/bootstrap/stage0.sh -o /run/stage0.sh
+  - PROVISION_ROLES=server sh /run/stage0.sh --boot
