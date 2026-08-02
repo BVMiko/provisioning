@@ -1,0 +1,18 @@
+#cloud-config
+autoinstall:
+  version: 1
+  source:
+    id: ubuntu-server-minimal
+  locale: en_US.UTF-8
+  keyboard:
+    layout: us
+    variant: ''
+  interactive-sections: [network, identity, storage]
+  drivers:
+    install: true
+  packages: [ca-certificates, curl, git]
+  shutdown: reboot
+  user-data:
+    runcmd:
+      - curl -fsSL https://raw.githubusercontent.com/BVMiko/provisioning/master/bootstrap/stage0.sh -o /run/stage0.sh
+      - PROVISION_ROLES=desktop sh /run/stage0.sh --boot
