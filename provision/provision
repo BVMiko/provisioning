@@ -1,0 +1,4 @@
+#!/bin/sh
+# Entry point. The engine lives in provision/engine.
+here=$(cd "$(dirname "$0")" && pwd)
+exec env PYTHONPATH="$here" python3 -m engine "$@"

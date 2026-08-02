@@ -1,0 +1,4 @@
+Unattended-Upgrade::Allowed-Origins:: "${distro_id}:${distro_codename}-security";
+{% if "desktop" in roles -%}
+Unattended-Upgrade::Allowed-Origins:: "${distro_id}:${distro_codename}-updates";
+{% endif -%}

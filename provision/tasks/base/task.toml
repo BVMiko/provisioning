@@ -1,0 +1,12 @@
+description = "Timezone, release-upgrade policy, unattended-upgrade scope"
+script = "run.sh"
+
+[[files]]
+src = "release-upgrades.j2"
+dst = "/etc/update-manager/release-upgrades"
+mode = "0644"
+
+[[files]]
+src = "52unattended-upgrades-provision.j2"
+dst = "/etc/apt/apt.conf.d/52unattended-upgrades-provision"
+mode = "0644"

@@ -1,0 +1,11 @@
+Package: snapd snapd-seed-glue snapd-installation-monitor
+Pin: release *
+Pin-Priority: -10
+
+Package: gnome-software-plugin-snap fwupd-snap
+Pin: release *
+Pin-Priority: -10
+
+Package: firefox thunderbird chromium-browser
+Pin: release o=Ubuntu
+Pin-Priority: -10
