@@ -1,0 +1,7 @@
+description = "Satisfy the snapd dependency with a stub and keep snaps out"
+script = "run.sh"
+
+[[files]]
+src = "no-snap.pref"
+dst = "/etc/apt/preferences.d/no-snap.pref"
+mode = "0644"

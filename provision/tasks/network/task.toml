@@ -1,0 +1,11 @@
+description = "Hand networking to NetworkManager on desktops"
+requires = ["desktop"]
+script = "run.sh"
+
+[when]
+roles = ["desktop"]
+
+[[files]]
+src = "99-provision-renderer.yaml"
+dst = "/etc/netplan/99-provision-renderer.yaml"
+mode = "0600"

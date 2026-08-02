@@ -1,0 +1,6 @@
+description = "GNOME desktop, sourced entirely from debs"
+requires = ["repositories"]
+script = "run.sh"
+
+[when]
+roles = ["desktop"]

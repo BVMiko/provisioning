@@ -1,0 +1,25 @@
+description = "Third-party APT repositories"
+requires = ["snap"]
+script = "run.sh"
+
+[[files]]
+src = "mozillateam.asc"
+dst = "/etc/apt/keyrings/mozillateam.asc"
+mode = "0644"
+
+[[files]]
+src = "mozillateam.sources.j2"
+dst = "/etc/apt/sources.list.d/mozillateam.sources"
+mode = "0644"
+
+[[files]]
+src = "mozillateam.pref"
+dst = "/etc/apt/preferences.d/mozillateam"
+mode = "0644"
+
+# unattended-upgrades only tracks Ubuntu origins by default, which would leave
+# the browser without security updates.
+[[files]]
+src = "51unattended-upgrades-mozillateam"
+dst = "/etc/apt/apt.conf.d/51unattended-upgrades-mozillateam"
+mode = "0644"
